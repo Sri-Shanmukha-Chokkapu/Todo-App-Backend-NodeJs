@@ -1,0 +1,129 @@
+//API 1
+//SCENARIO 1
+//Returns a list of all todos whose status is 'TO DO'
+GET http://localhost:3000/todos/?status=COMPLETED
+###
+
+//API 1
+//SCENARIO 2
+//Returns a list of all todos whose priority is 'HIGH'
+GET http://localhost:3000/todos/?priority=AVERAGE
+###
+
+
+//API 1
+//SCENARIO 3
+//Returns a list of all todos whose priority is 'HIGH' and status is 'IN PROGRESS'
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRES
+###
+
+//API 1
+//SCENARIO 4
+//Returns a list of all todos whose todo contains 'Play' text
+GET http://localhost:3000/todos/
+###
+
+//API 1
+//SCENARIO 5
+//Returns a list of all todos whose category is 'WORK' and status is 'DONE'
+GET http://localhost:3000/todos/?category=WORK&status=DON
+###
+
+//API 1
+//SCENARIO 6
+//Returns a list of all todos whose category is 'HOME'
+GET http://localhost:3000/todos/?category=HOME
+###
+
+//API 1
+//SCENARIO 7
+//Returns a list of all todos whose category is 'LEARNING' and priority is 'HIGH'
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+###
+
+//API 2
+//Returns a specific todo based on the todo ID
+GET http://localhost:3000/todos/3/
+###
+
+//API 3
+//Returns a list of all todos with a specific due date in the query parameter
+GET http://localhost:3000/agenda/?date=2022-10-50
+###
+
+//API 4
+//Create a todo in the todo table,
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+ "id": 6,
+ "todo": "Finalize event theme",
+ "priority": "LOW",
+ "status": "TO DO",
+ "category": "HOME",
+ "dueDate": "2021-02-22"
+}
+###
+
+//API 5
+//SCENARIO 1
+//Updates the details of a specific todo based on the todo ID
+PUT http://localhost:3000/todos/1/
+Content-Type: application/json
+
+{
+  "status": "FINISHED"
+}
+###
+
+//API 5
+//SCENARIO 2
+//Updates the details of a specific todo based on the todo ID
+PUT http://localhost:3000/todos/2/
+Content-Type: application/json
+
+{
+  "priority": "LEAST"
+}
+###
+
+//API 5
+//SCENARIO 3
+//Updates the details of a specific todo based on the todo ID
+PUT http://localhost:3000/todos/3/
+Content-Type: application/json
+
+{
+"todo": "Clean the garden"
+}
+###
+
+//API 5
+//SCENARIO 3
+//Updates the details of a specific todo based on the todo ID
+PUT http://localhost:3000/todos/3/
+Content-Type: application/json
+
+{
+ "category": "MALL"
+}
+###
+
+//API 5
+//SCENARIO 3
+//Updates the details of a specific todo based on the todo ID
+PUT http://localhost:3000/todos/3/
+Content-Type: application/json
+
+{
+ "dueDate": "2015-25-22"
+}
+###
+//API 6
+//Deletes a todo from the todo table based on the todo ID
+DELETE http://localhost:3000/todos/6/
+###
+
+
+
